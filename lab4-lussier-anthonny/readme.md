@@ -6,5 +6,8 @@
 cet excercuce nous a permis d'introduire la strucuture d'un theme wordpress.
 voici la structure utiliser:
 -Pour le style css nous avons utiliser un dossier Sass
--Pour les fonctions du themes se trouvent dans function.php
+-Pour les fonctions du theme se trouvent dans function.php
 -le modele principale est index.php
+
+pour modifer read.me
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
