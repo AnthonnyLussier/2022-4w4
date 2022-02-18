@@ -1,55 +1,64 @@
-
-#burger {
-    position : absolute;
-    transition : transform .3s;
-    transform : rotate(0);
+#burger{
+    position: absolute;
+    transition: transform .3s;
+    transform: rotate(0);
+    
 }
 
-#chk-burger:checked ~ #burger {
-    transform : rotate(90deg);
+#chk-burger:checked ~ #burger{
+    transform:rotate(90deg);
+    
 }
-.menu-principal-container {
-    display : none;
+#chk-burger:checked ~ .menu-principale-container{
+    display: block;
 }
-#chk-burger:checked ~ .menu-principal-container{
-    display : block;
+.menu-principale-container{
+    display: none;
+}
+#chk-burger{
+    display: none;
 }
 
-
-.menu-principal-container{}
 .menu{
     list-style-type: none;
-    margin : 0;
-    padding :0;
+    margin: 0;
+    padding: 0;
 }
 .menu-item{
-    margin:0;
-    padding : 0;
+    margin: 0;
+    padding: 0;
     a{
-        display : block;
+        display: block;
         text-decoration: none;
-        padding : 4px;
+        padding: 20px;
         background-color: $color__background-link;
-        &:hover {
+        &:hover{
             background-color: $color__background-link-hover;
         }
     }
 }
 
-@media screen and (min-width : $largeur__media--tablette){
-    #burger {
-        display : none;
+@media screen and (min-width:$largeur__media--tablette) {
+    #burger{
+        display: block;
+        display: none;
     }
-    .menu-principal-container {
-        display : block;
-    }
-
+    .menu-principale-container{
+        display: block;
+}
 }
 
+.navigation{
+    display: flex;
+    flex-direction: column;
+}
 
+.navigation__lien {
+    padding: 1rem;
+    background-color: $color__background-link;
+}
 
-
-
-
-
+.navigation__lien:hover {
+    background-color: $color__background-link-hover;
+}
 

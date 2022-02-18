@@ -1,39 +1,31 @@
-@mixin links(	$couleur, 
-				$couleur--visited, 
-				$couleur--hover)
-{
-	color: $couleur;
 
-	&:visited {
-		color: $couleur--visited;
+@mixin link($couleur, $couleur--visited , $couleur--hover) {
+		color: $couleur;
+	
+		&:visited {
+			color: $couleur--visited;
+		}
+	
+		&:hover,
+		&:focus,
+		&:active {
+			color: $couleur--hover;
+		}
+	
+		&:focus {
+			outline: thin dotted;
+		}
+	
+		&:hover,
+		&:active {
+			outline: 0;
+		}
 	}
-
-	&:hover,
-	&:focus,
-	&:active {
-		color: $couleur--hover;
-	}
-
-	&:focus {
-		outline: thin dotted;
-	}
-
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+	
+a{
+	@include link($color__link,$color__link-visited,$color__link-hover);
 }
 
-
-a {
-	@include links(	$color__link,
-					$color__link-visited, 
-					$color__link-hover )
+.site__fooetr a{
+	@include link($color__link__footer,$color__link__footer-visited,$color__link__footer-hover);
 }
-
- .site__footer a{
-	@include links(	$color__link__footer,
-					$color__link__footer-visited, 
-					$color__link__footer-hover );
-}
-

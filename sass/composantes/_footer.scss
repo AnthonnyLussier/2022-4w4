@@ -2,22 +2,20 @@
     font-family: $font__titre;
     background-color: $color__background-footer;
     padding: 15px;
+    &__menu{
 
-    &__menu{ // .site__footer__menu
-
-      &__ul{ // .site__footer__menu__ul
-          display : flex;
+      &__ul{
+          display:flex;
           list-style-type: none;
           justify-content: center;
-          .menu-item{ // .site__footer__menu__ul .menu-item
-              margin : 10px 5px;
-            a{ // .site__footer__menu__ul .menu-item a
-              display : flex;
+          .menu-item {
+              margin:10px 5px;
+            a{
+              display: flex;
               align-items: center;
-              padding : 3px;
-              svg { // .site__footer__menu__ul .menu-item a svg
-                color: aqua;
-              }
+              padding: 3px;
+              svg{ color: chartreuse;}
+             
             }
           }
       }
@@ -30,4 +28,11 @@
   text-align: center;
 }
 
-
+.menu-simple-container{
+  display: grid;
+  grid-template-columns: ($size__site-barre) auto;
+  grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+}

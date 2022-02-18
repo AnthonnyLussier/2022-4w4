@@ -1,15 +1,23 @@
 @charset "UTF-8";
 /*
-theme name: Exer-1 gr3
+Theme Name: 2022-4w4 Anthonny Lussier
+Author: ANTHONNY lUSSIER
+Author URI:https://github.com/AnthonnyLussier/2022-4w4
+Description: Ce thème servira de base de développement pour l'ensemble du cours 4W4. Chacune des étapes de développement se retrouvera sur gitHub à l'adresse: https://github.com/eddytuto/2022-4w4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cidw-4w4
+
 */
 /* ---------------------------------------------------------
 VARIABLES
 --------------------------------------------------------- */
 /* ---------------- BACKGROUND */
 /* ---------------- LIENS */
-/* ---------------- LIENS FOOTER */
+/* ---------------- LIENS footer */
 /* ---------------- FONT */
-/* ------------------------------------- points de rupture des media queries */
+/*------------------struture media quarie*/
 /* ---------------------------------------------------------
 INITIALISATION
 --------------------------------------------------------- */
@@ -357,23 +365,23 @@ a:hover, a:active {
   outline: 0;
 }
 
-.site__footer a {
-  color: #f40b0b;
+.site__fooetr a {
+  color: #eb1e7e;
 }
 
-.site__footer a:visited {
-  color: #1435eb;
+.site__fooetr a:visited {
+  color: #d80ece;
 }
 
-.site__footer a:hover, .site__footer a:focus, .site__footer a:active {
-  color: #19e123;
+.site__fooetr a:hover, .site__fooetr a:focus, .site__fooetr a:active {
+  color: #0fc7ff;
 }
 
-.site__footer a:focus {
+.site__fooetr a:focus {
   outline: thin dotted;
 }
 
-.site__footer a:hover, .site__footer a:active {
+.site__fooetr a:hover, .site__fooetr a:active {
   outline: 0;
 }
 
@@ -383,7 +391,7 @@ COMPOSANTES
 .principal {
   margin: 20px;
   padding: 10px 15px;
-  background-color: #eca7a7;
+  background-color: #a7ecd1;
   border-radius: 5px;
   box-shadow: #39443e 1px -1px 10px;
 }
@@ -405,15 +413,22 @@ COMPOSANTES
   flex-wrap: wrap;
 }
 
+.formation__liste :hover {
+  box-shadow: #ee0034 1px -1px 10px;
+}
+
 .formation__cours {
-  background-color: #ffd6d1;
-  box-shadow: #394044 1px -1px 10px;
+  background-color: #a7ecd1;
   border-radius: 5px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 10px;
+}
+
+.formation__cours :hover {
+  box-shadow: none;
 }
 
 @media screen and (min-width: 800px) {
@@ -445,19 +460,75 @@ COMPOSANTES
 }
 
 .site__header {
-  background-color: #594036;
+  background-color: #399ba2;
   color: #fa9292;
   padding-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.site__header .header__titre {
-  font-size: 3em;
+@media screen and (min-width: 800px) {
+  .site__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.site__header__titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.site__header__titre h1 {
+  font-size: clamp(2rem, 3vw, 7rem);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-.site__header .header__desc {
-  font-size: 1.5rem;
+.site__header__titre h2 {
+  font-size: clamp(1rem, 2vw, 4rem);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0 0 0 2rem;
+}
+
+.site__header__util {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .site__header__util {
+    width: 20%;
+  }
+}
+
+.recherche {
+  background-color: aquamarine;
+  width: 100%;
+  position: relative;
+}
+
+.recherche__input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recherche__bouton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
 }
 
 #burger {
@@ -470,12 +541,16 @@ COMPOSANTES
   transform: rotate(90deg);
 }
 
-.menu-principal-container {
+#chk-burger:checked ~ .menu-principale-container {
+  display: block;
+}
+
+.menu-principale-container {
   display: none;
 }
 
-#chk-burger:checked ~ .menu-principal-container {
-  display: block;
+#chk-burger {
+  display: none;
 }
 
 .menu {
@@ -492,26 +567,41 @@ COMPOSANTES
 .menu-item a {
   display: block;
   text-decoration: none;
-  padding: 4px;
-  background-color: #ffa3a3;
+  padding: 20px;
+  background-color: #a3c3ff;
 }
 
 .menu-item a:hover {
-  background-color: #ffd1d1;
+  background-color: #7da8d8;
 }
 
 @media screen and (min-width: 800px) {
   #burger {
+    display: block;
     display: none;
   }
-  .menu-principal-container {
+  .menu-principale-container {
     display: block;
   }
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation__lien {
+  padding: 1rem;
+  background-color: #a3c3ff;
+}
+
+.navigation__lien:hover {
+  background-color: #7da8d8;
+}
+
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: #2f2a28;
+  background-color: #399ba2;
   padding: 15px;
 }
 
@@ -532,7 +622,7 @@ COMPOSANTES
 }
 
 .site__footer__menu__ul .menu-item a svg {
-  color: aqua;
+  color: chartreuse;
 }
 
 .footer__titre,
@@ -542,47 +632,54 @@ COMPOSANTES
   text-align: center;
 }
 
+.menu-simple-container {
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-areas: "header header" "sidebar main" "footer footer";
+}
+
 /* ---------------------------------------------------------
 LAYOUT
 --------------------------------------------------------- */
 /*
-theme name: Lab 2 Lemieux Florence
+theme name: Lab4 anthonny Lussier
 */
 .site {
-  background-color: #957365;
+  background-color: #3882d6;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .site__header {
   grid-area: header;
-  background-color: #594036;
+  background-color: #399ba2;
 }
 
 .site__barre {
   grid-area: sidebar;
-  background-color: #ff8585;
+  background-color: #85d2ff;
 }
 
 .site__main {
   grid-area: main;
-  background-color: #eca7a7;
+  background-color: #a7ecd1;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: #2f2a28;
+  background-color: #399ba2;
 }
 
 .site {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "sidebar" "header" "main" "footer";
+  grid-template-areas: "sidebar" "header " " main" "footer";
 }
 
 @media screen and (min-width: 800px) {
   .site {
+    display: grid;
     grid-template-columns: 300px auto;
-    grid-template-areas: "header header" "sidebar main" "footer footer";
+    grid-template-areas: "header header" "sidebar main" "footer footer";
   }
 }
 /*# sourceMappingURL=style.css.map */
